@@ -12,5 +12,6 @@ bp_routes.template_folder = Config.TEMPLATE_FOLDER #'..\\View\\templates'
 
 @bp_routes.route('/', methods=['GET'])
 @bp_routes.route('/index', methods=['GET'])
+@login_required()
 def index():
     return render_template('index.html')
